@@ -5,7 +5,7 @@ try {
   // `who-to-greet` input defined in action metadata file
   const commitName = core.getInput("commit-name");
 
-  if(!commitName.toLowerCase().startsWith('fix(') || !commitName.toLowerCase().startsWith('feature(') ||!commitName.toLowerCase().startsWith('hotfix(')){
+  if(!commitName.toString().toLowerCase().startsWith('fix(') || !commitName.toString().toLowerCase().startsWith('feature(') ||!commitName.toString().toLowerCase().startsWith('hotfix(')){
     core.setFailed("Commit must start with fix/feature/hotfix");
   }
 
