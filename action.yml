@@ -1,5 +1,5 @@
 name: "validate-commit-name"
-description: "Greet someone and record the time"
+description: "Is the commit name valid ?"
 inputs:
   commit-name: # id of input
     description: "Test"
@@ -7,7 +7,7 @@ inputs:
     default: ""
 outputs:
   response: # id of output
-    description: "The time we greeted you"
+    description: "Wether commit name is valid or not"
 runs:
   using: "node12"
   main: "index.js"
