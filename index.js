@@ -6,7 +6,7 @@ try {
   const commitName = core.getInput("commit-name");
 
   if(!commitName.toLowerCase().startsWith('fix') || !commitName.toLowerCase().startsWith('feature') ||!commitName.toLowerCase().startsWith('hotfix')){
-    core.setOutput("response", Error('Commit must start with fix/feature/hotfix'));
+    core.setFailed("Commit must start with fix/feature/hotfix");
   }
 } catch (error) {
   core.setFailed(error.message);
